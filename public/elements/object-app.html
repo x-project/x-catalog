@@ -1,0 +1,55 @@
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/api-model/api-model.html">
+<link rel="import" href="object-list.html">
+<link rel="import" href="part-pages.html">
+<dom-module id="object-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+        margin: 10px 300px;
+      }
+    </style>
+   
+    <api-model-find id="find" collection="objects" response="{{objects}}"
+      perpage="{{perpage}}" page="{{page}}">
+    </api-model-find>
+
+    <api-model-count id="count" collection="objects" response="{{count}}">
+    </api-model-count>
+
+<!--
+    <iron-ajax id="ajax" method="GET" url="/api/objects" 
+      last-response="{{objects}}">
+    </iron-ajax>
+
+    <iron-ajax id="count" method="GET" url="/api/objects/count" 
+      last-response="{{count}}">
+    </iron-ajax>
+ -->
+
+    <object-list objects="{{objects}}"></object-list>
+    
+    <part-pages perpage="{{perpage}}" count="{{count}}"
+      on-change-page="on_change_page"></part-pages>
+
+  </template>
+</dom-module>
+<script>
+  Polymer({
+
+    is: 'object-app',
+
+    attached: function () {
+      this.perpage = 9;
+      this.$.count.send();
+      this.$.find.send();
+    },
+
+    on_change_page: function (event) {
+      this.page = event.detail.current - 1;
+      this.$.find.send();
+    } 
+
+  });
+</script>

@@ -1,0 +1,48 @@
+<link rel="import" href="object-item.html">
+<dom-module id="object-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <template is="dom-repeat" items="{{objects}}" as="object" filter="filter">
+      <object-item object="{{object}}"></object-item>
+    </template>
+
+  </template>
+
+</dom-module>
+<script>
+  Polymer({
+
+    is: 'object-list',
+
+    properties: {
+      objects: {
+        type: Array,
+        value: function () { return []; },
+        observer: 'update'
+      },
+      root: {
+        value: String,
+        value: '/'
+      }
+    },
+
+    update: function(){
+      //console.log(this.objects);
+    },
+
+    filter: function (item) {
+      var root = this.root;
+      item.image = root + item.code + '/texture.png';
+      item.page = root + item.code;
+      item.obj = root + item.code + '/model.obj';
+      item.json = root + item.code + '/model.json'
+      return true;
+    }
+
+  })
+</script>

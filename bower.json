@@ -1,0 +1,11 @@
+{
+  "name": "x-catalog",
+  "version": "0.0.1",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1",
+    "iron-ajax": "PolymerElements/iron-ajax#^1.0",
+    "iron-image": "PolymerElements/iron-image#^1.0",
+    "iron-input": "PolymerElements/iron-input#^1.0",
+    "api-model": "x-element/api-model"
+  }
+}
