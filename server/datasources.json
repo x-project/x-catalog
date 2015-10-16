@@ -3,9 +3,9 @@
     "name": "db",
     "connector": "memory"
   },
-   "mongo": {
+  "mongo": {
     "name": "mongo",
-    "database": "object",
+    "database": "x-catalog",
     "connector": "mongodb"
   }
 }

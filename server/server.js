@@ -1,13 +1,11 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 var path = require('path');
-var env = require('node-env-file');
 
 var app = module.exports = loopback();
 
-env(__dirname + '/.env');
-
 app.start = function() {
+  // start the web server
   return app.listen(function() {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
@@ -19,17 +17,14 @@ app.start = function() {
   });
 };
 
+// Bootstrap the application, configure models, datasources and middleware.
+// Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
   if (err) throw err;
 
   app.use(loopback.static(path.resolve(__dirname, '../public')));
 
-  var index = path.resolve(__dirname, '../public/index.html');
-
-  app.middleware('final', function (req, res) {
-    res.sendFile(index);
-  });
-
+  // start the server if `$ node server.js`
   if (require.main === module)
     app.start();
 });

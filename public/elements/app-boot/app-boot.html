@@ -26,8 +26,7 @@
     ],
 
     '/': function (context) {
-      context.page = 'page-catalog';
-      this.open(context);
+      this.redirect('/catalog?' + context.querystring);
     },
 
     '/catalog': function (context) {
@@ -36,17 +35,43 @@
     },
 
     '/catalog/:object_id': function (context) {
+      console.log(context);
       context.page = 'page-object';
-      this.open(context);
-    },
-
-    '/test': function (context) {
-      context.page = 'page-test';
-      this.open(context);
+      context.data = {};
+      this.fetch({
+        collection: 'objects',
+        model_id: context.params.object_id
+      })
+      .then(function (object) {
+        var catalog = context.querystring;
+        object.model_url = 'http://' + catalog + '/' + object.code + '/model.obj';
+        object.texture_url = 'http://' + catalog + '/' + object.code + '/texture.png';
+        context.data.object = object;
+        console.log(object);
+        this.open(context);
+      }.bind(this))
+      .catch(function (error) {
+        console.warn(error);
+      });
     },
 
     '/*': function (context) {
-      this.redirect('/');
+      this.redirect('/catalog?' + context.querystring);
+    },
+
+    fetch: function (params) {
+      var defer = Promise.defer();
+      var request = document.createElement('api-model-get');
+      request.collection = params.collection;
+      request.modelId = params.model_id;
+      request.addEventListener('response', function (response) {
+        defer.resolve(request.response);
+      });
+      request.addEventListener('error', function (error) {
+        defer.reject(request.error);
+      });
+      request.send();
+      return defer.promise;
     }
 
   });

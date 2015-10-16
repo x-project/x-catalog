@@ -1,7 +1,7 @@
 {
   "name": "x-catalog",
   "description": "x-catalog",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint ."
@@ -14,8 +14,6 @@
     "loopback-component-explorer": "^2.1.0",
     "loopback-connector-mongodb": "^1.13.0",
     "loopback-datasource-juggler": "^2.39.0",
-    "mongojs": "^1.4.1",
-    "node-env-file": "^0.1.7",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
-<link rel="import" href="../../components/api-model/api-model.html">
-<link rel="import" href="../part-deck/part-deck.html">
-<link rel="import" href="../part-pages/part-pages.html">
+<link rel="import" href="/components/api-model/api-model.html">
+<link rel="import" href="/elements/part-deck/part-deck.html">
+<link rel="import" href="/elements/part-pages/part-pages.html">
 <dom-module id="page-catalog">
   <template>
     <style>
@@ -35,13 +35,13 @@
     is: 'page-catalog',
 
     attached: function () {
-      this.perpage = 9;
+      this.perpage = 20;
       this.$.count.send();
-      this.$.find.send();
+      // this.$.find.send();
     },
 
     on_change_page: function (event) {
-      this.page = event.detail.current - 1;
+      this.page = event.detail.current;
       this.$.find.send();
     }
 

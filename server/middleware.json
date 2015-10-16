@@ -21,11 +21,15 @@
   "routes": {
     "loopback#rest": {
       "paths": ["${restApiRoot}"]
+    },
+    "./middleware/spa": {
+      "paths": ["*/", "*"]
     }
   },
   "files": {
   },
   "final": {
+    "loopback#urlNotFound": {}
   },
   "final:after": {
     "loopback#errorHandler": {}

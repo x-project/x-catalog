@@ -10,7 +10,7 @@
 
   </template>
 </dom-module>
-<script src="../../components/three.js/build/three.js"></script>
+<script src="/components/three.js/build/three.js"></script>
 <script src="three-controls.js"></script>
 <script src="three-loader.js"></script>
 <script>
@@ -19,9 +19,11 @@
     is: 'part-viewer',
 
     properties: {
-      item: {
-        type: Object,
-        observer: 'on_item'
+      modelUrl: {
+        type: String,
+      },
+      textureUrl: {
+        type: String
       },
       width: {
         type: Number,
@@ -33,7 +35,7 @@
       }
     },
 
-    ready: function () {
+    attached: function () {
       var width = this.width;
       var height = this.height;
 
@@ -74,35 +76,31 @@
       }
 
       render();
+
+      this.load();
     },
 
-    on_item: function () {
-      var obj_url = '/unzip/' + this.item.id + '/model.obj';
-      var tex_url = '/unzip/' + this.item.id + '/texture.png';
-
-      console.log(obj_url, tex_url);
-
+    load: function () {
+      var model_url = this.modelUrl;
+      var texture_url = this.textureUrl;
       var scene = this.scene;
 
       var texture = new THREE.Texture();
-
-      var tex_loader = new THREE.ImageLoader();
-      tex_loader.load(tex_url, function (image) {
+      var texture_loader = new THREE.ImageLoader();
+      texture_loader.crossOrigin = 'anonymous';
+      texture_loader.load(texture_url, function (image) {
         texture.image = image;
         texture.needsUpdate = true;
-        console.log(image);
       });
 
       var obj_loader = new THREE.OBJLoader();
-      obj_loader.load(obj_url, function (object) {
+      obj_loader.load(model_url, function (object) {
         object.traverse(function (child) {
           if (child instanceof THREE.Mesh) {
             child.material.map = texture;
             child.material.transparent = true;
           }
         });
-
-        console.log(object);
         scene.add(object);
       });
     }

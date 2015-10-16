@@ -33,7 +33,10 @@
     },
 
     filter: function (item) {
-      item.link = '/catalog/' + item.code;
+      var catalog = location.search.slice(1);
+      item.url = '/catalog/' + item.id + '?' + catalog;
+      item.texture_url = 'http://' + catalog + '/' + item.code + '/texture.png';
+      item.model_url = 'http://' + catalog + '/' + item.code + '/model.obj';
       return true;
     }
 

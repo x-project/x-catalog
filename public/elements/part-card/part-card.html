@@ -3,14 +3,14 @@
 <dom-module id="part-card">
   <template>
     <style>
-      .big {
-        height: 200px;
+      .preview {
         width: 200px;
+        height: 200px;
       }
     </style>
 
-    <a is="app-link" href="{{item.link}}">
-      <iron-image class="big" src="{{object.image}}" sizing="contain"></iron-image>
+    <a is="app-link" href="{{item.url}}">
+      <iron-image class="preview" src="{{item.texture_url}}" sizing="contain"></iron-image>
     </a>
 
   </template>

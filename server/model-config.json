@@ -34,7 +34,6 @@
   },
 
   "Object": {
-    "dataSource": "mongo",
-    "public": true
+    "dataSource": "mongo"
   }
 }
