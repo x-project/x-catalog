@@ -15,6 +15,7 @@
     "loopback-connector-mongodb": "^1.13.0",
     "loopback-datasource-juggler": "^2.39.0",
     "mongojs": "^1.4.1",
+    "node-env-file": "^0.1.7",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {

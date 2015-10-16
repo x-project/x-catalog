@@ -1,0 +1,24 @@
+<link rel="import" href="../part-viewer/part-viewer.html">
+<dom-module id="page-object">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <div class="page">
+      <h1 class="title">Catalog</h1>
+      <h2 class="subtitle"><span>Object</span> <span>{{object.code}}</span></h2>
+      <part-viewer object="{{object}}"></part-viewer>
+    </div>
+
+  </template>
+</dom-module>
+<script>
+  Polymer({
+
+    is: 'page-object'
+
+  });
+</script>

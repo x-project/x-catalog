@@ -1,0 +1,41 @@
+<link rel="import" href="../part-card/part-card.html">
+<dom-module id="part-deck">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <div>
+      <template is="dom-repeat" items="{{items}}" filter="filter">
+        <part-card item="{{item}}"></part-card>
+      </template>
+    </div>
+
+  </template>
+
+</dom-module>
+<script>
+  Polymer({
+
+    is: 'part-deck',
+
+    properties: {
+      items: {
+        type: Array,
+        value: function () { return []; }
+      },
+      root: {
+        value: String,
+        value: '/'
+      }
+    },
+
+    filter: function (item) {
+      item.link = '/catalog/' + item.code;
+      return true;
+    }
+
+  });
+</script>

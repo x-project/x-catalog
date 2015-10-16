@@ -1,0 +1,49 @@
+<link rel="import" href="../../components/api-model/api-model.html">
+<link rel="import" href="../part-deck/part-deck.html">
+<link rel="import" href="../part-pages/part-pages.html">
+<dom-module id="page-catalog">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <api-model-find id="find" collection="objects"
+      perpage="{{perpage}}" page="{{page}}"
+      response="{{objects}}">
+    </api-model-find>
+
+    <api-model-count id="count" collection="objects"
+      response="{{count}}">
+    </api-model-count>
+
+    <div class="page">
+      <h1 class="title">Catalog</h1>
+
+      <part-deck items="{{objects}}"></part-deck>
+
+      <part-pages perpage="{{perpage}}" count="{{count}}"
+        on-change-page="on_change_page"></part-pages>
+    </div>
+
+  </template>
+</dom-module>
+<script>
+  Polymer({
+
+    is: 'page-catalog',
+
+    attached: function () {
+      this.perpage = 9;
+      this.$.count.send();
+      this.$.find.send();
+    },
+
+    on_change_page: function (event) {
+      this.page = event.detail.current - 1;
+      this.$.find.send();
+    }
+
+  });
+</script>

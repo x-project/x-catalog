@@ -1,0 +1,30 @@
+<link rel="import" href="../../components/iron-image/iron-image.html">
+<link rel="import" href="../../components/app-link/app-link.html">
+<dom-module id="part-card">
+  <template>
+    <style>
+      .big {
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+
+    <a is="app-link" href="{{item.link}}">
+      <iron-image class="big" src="{{object.image}}" sizing="contain"></iron-image>
+    </a>
+
+  </template>
+</dom-module>
+<script>
+  Polymer({
+
+    is: 'part-card',
+
+    properties: {
+      item: {
+        type: Object
+      }
+    }
+
+  });
+</script>
