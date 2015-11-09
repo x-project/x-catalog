@@ -1,0 +1,96 @@
+{
+  "_id": "5583eaea4ae08721a1b9e25f",
+  "id": "0b66a8b7-a056-439f-baa4-86108bc2c94f",
+  "name": "bowl table natural",
+  "productType": "3D",
+  "zIndex": "200",
+  "vendor": "Mater",
+  "vendorUrl": "http://hsm-prod-modellers-assets.S3.amazonaws.com/vendorlogos/171/logo.jpg",
+  "categories": [
+    "10026",
+    "0f52f22b-1d92-470c-82fe-1aeee896df6d"
+  ],
+  "images": [
+    "http://cf-hsm-prod-assets.homestyler.com/i/0b66a8b7-a056-439f-baa4-86108bc2c94f/iso.jpg"
+  ],
+  "imagesResize": [
+    "http://cf-hsm-prod-assets.homestyler.com/i/0b66a8b7-a056-439f-baa4-86108bc2c94f/resized/iso0_w160_h160.jpg"
+  ],
+  "top": "http://hsm-prod-assets.s3.amazonaws.com/i/0b66a8b7-a056-439f-baa4-86108bc2c94f/Top.png",
+  "boundingBox": {
+    "xLen": 51.74879837036133,
+    "yLen": 51.77199935913086,
+    "zLen": 51.251800537109375
+  },
+  "model": {
+    "modelUrl": "http://hsm-prod-assets.s3.amazonaws.com/i/0b66a8b7-a056-439f-baa4-86108bc2c94f/model-fc.gz",
+    "textureUrl": "http://hsm-prod-assets.s3.amazonaws.com/i/0b66a8b7-a056-439f-baa4-86108bc2c94f/model-fc.png"
+  },
+  "ticket": {
+    "sku": ""
+  },
+  "tp": "seating",
+  "retailers": [
+    {
+      "name": "Mater",
+      "price": 0,
+      "url": "http://mater.dk/collections/mater"
+    }
+  ],
+  "variations": {},
+  "attributes": [
+    {
+      "id": "f89e5131-3ddb-4b55-b522-50205909c3e4",
+      "name": "Colors",
+      "values": [
+        {
+          "id": "180d6f10-3121-4684-8cb9-027790d32971",
+          "value": "Brown"
+        }
+      ]
+    },
+    {
+      "id": "9760302e-698a-4a18-8872-72f6ae9568bb",
+      "name": "zindex",
+      "values": [
+        {
+          "id": "b8edcdbd-f62c-427b-9baf-3262b356a9df",
+          "value": "200"
+        }
+      ]
+    },
+    {
+      "id": "d852d083-4918-4f1b-b12f-72ac42d7325d",
+      "name": "WallOpeningType",
+      "values": [
+        {
+          "id": "78c6d804-5711-4fde-8c2d-ccb794e95e3c",
+          "value": "None"
+        }
+      ]
+    },
+    {
+      "id": "f2ebc921-291a-42c6-be8d-e6f3019672fb",
+      "name": "AssetType",
+      "values": [
+        {
+          "id": "001e1123-52fb-42d4-a4fe-beffc201084a",
+          "value": "3D"
+        }
+      ]
+    },
+    {
+      "id": "d84e3ec7-d39a-471e-8f39-58f645e209ef",
+      "name": "isScalable",
+      "values": [
+        {
+          "id": "f7a2e788-611f-459a-908d-dadd483699d9",
+          "value": "false"
+        }
+      ]
+    }
+  ],
+  "status": 1,
+  "modifiedTime": "2014-12-07T14:31:25.946Z",
+  "groups": []
+}

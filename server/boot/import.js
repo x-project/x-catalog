@@ -3,7 +3,7 @@ var path = require('path');
 
 module.exports = function (server) {
 
-  var START = false;
+  var START = true;
 
   var models = {};
 
@@ -12,24 +12,41 @@ module.exports = function (server) {
     models[model_name] = model;
   });
 
-  function fetch_codes (file_name) {
+  function clear () {
     var defer = Promise.defer();
 
-    fs.readFile(path.join(__dirname + file_name), 'utf8', function (err, text) {
+    models['Object'].destroyAll(function (err) {
       if (err) {
-        defer.reject(err);
+        defer.reject();
         return;
       }
 
-      var list = text.split('\n');
-      var codes = list.map(function (code) {
-        return { code: code };
-      });
-
-      defer.resolve(codes);
+      defer.resolve();
     });
 
     return defer.promise;
+  }
+
+  function fetch_codes (file_name) {
+    return function () {
+      var defer = Promise.defer();
+
+      fs.readFile(path.join(__dirname + file_name), 'utf8', function (err, text) {
+        if (err) {
+          defer.reject(err);
+          return;
+        }
+
+        var list = text.split('\n');
+        var codes = list.map(function (code) {
+          return { code: code };
+        });
+
+        defer.resolve(codes);
+      });
+
+      return defer.promise;
+    };
   }
 
   function create_objects (codes) {
@@ -55,7 +72,9 @@ module.exports = function (server) {
   }
 
   function start () {
-    fetch_codes('/../data/codes.txt')
+
+    clear()
+      .then(fetch_codes('/../data/codes.txt'))
       .then(create_objects)
       .then(success)
       .catch(error);

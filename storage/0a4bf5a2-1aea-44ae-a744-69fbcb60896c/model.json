@@ -1,0 +1,63 @@
+{
+  "_id": "5583eaff4ae08721a1b9f148",
+  "id": "0a4bf5a2-1aea-44ae-a744-69fbcb60896c",
+  "name": "Moda",
+  "productType": "3D",
+  "zIndex": "200",
+  "vendor": "Room&Board",
+  "vendorUrl": "http://hsm-prod-assets.S3.amazonaws.com/vendorlogos/30/logo.jpg",
+  "categories": [
+    "143",
+    "218"
+  ],
+  "images": [
+    "http://cf-hsm-prod-assets.homestyler.com/i/0a4bf5a2-1aea-44ae-a744-69fbcb60896c/iso.jpg"
+  ],
+  "imagesResize": [
+    "http://cf-hsm-prod-assets.homestyler.com/i/0a4bf5a2-1aea-44ae-a744-69fbcb60896c/resized/iso0_w160_h160.jpg"
+  ],
+  "top": "http://hsm-prod-assets.s3.amazonaws.com/i/0a4bf5a2-1aea-44ae-a744-69fbcb60896c/Top.png",
+  "boundingBox": {
+    "xLen": 167.63999938964844,
+    "yLen": 51.0885009765625,
+    "zLen": 76.19999694824219
+  },
+  "model": {
+    "modelUrl": "http://hsm-prod-assets.s3.amazonaws.com/i/0a4bf5a2-1aea-44ae-a744-69fbcb60896c/model-fc.gz",
+    "textureUrl": "http://hsm-prod-assets.s3.amazonaws.com/i/0a4bf5a2-1aea-44ae-a744-69fbcb60896c/model-fc.png"
+  },
+  "ticket": {},
+  "tp": "seating",
+  "retailers": [
+    {
+      "name": "Room & Board",
+      "url": "http://www.roomandboard.com/rnb/product/detail.do?productGroup=3160&catalog=room&category=rm_kids&subcategory=fl_kid_dress_bdr"
+    }
+  ],
+  "variations": {},
+  "attributes": [
+    {
+      "id": "f2ebc921-291a-42c6-be8d-e6f3019672fb",
+      "name": "AssetType",
+      "values": [
+        {
+          "id": "001e1123-52fb-42d4-a4fe-beffc201084a",
+          "value": "3D"
+        }
+      ]
+    },
+    {
+      "id": "9760302e-698a-4a18-8872-72f6ae9568bb",
+      "name": "zindex",
+      "values": [
+        {
+          "id": "b8edcdbd-f62c-427b-9baf-3262b356a9df",
+          "value": "200"
+        }
+      ]
+    }
+  ],
+  "status": 1,
+  "modifiedTime": "2014-10-28T17:37:55.666Z",
+  "groups": []
+}

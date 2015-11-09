@@ -1,0 +1,66 @@
+{
+  "_id": "5583eb2c4ae08721a1ba0001",
+  "id": "0be3edf5-c0f6-4669-9648-0a827c0f2daf",
+  "name": "Table Runners - Botanical Wreath",
+  "productType": "3D",
+  "zIndex": "300",
+  "vendor": "Williams Sonoma",
+  "vendorUrl": "http://hsm-prod-modellers-assets.S3.amazonaws.com/vendorlogos/125/logo.jpg",
+  "categories": [
+    "20",
+    "39",
+    "91",
+    "303",
+    "20a0f099-72d5-4f53-915e-84811a7843a7"
+  ],
+  "images": [
+    "http://cf-hsm-prod-assets.homestyler.com/i/0be3edf5-c0f6-4669-9648-0a827c0f2daf/iso.jpg"
+  ],
+  "imagesResize": [
+    "http://cf-hsm-prod-assets.homestyler.com/i/0be3edf5-c0f6-4669-9648-0a827c0f2daf/resized/iso0_w160_h160.jpg"
+  ],
+  "top": "http://hsm-prod-assets.s3.amazonaws.com/i/0be3edf5-c0f6-4669-9648-0a827c0f2daf/Top.png",
+  "boundingBox": {
+    "xLen": 37.016998291015625,
+    "yLen": 54.54819869995117,
+    "zLen": 23.15290069580078
+  },
+  "model": {
+    "modelUrl": "http://hsm-prod-assets.s3.amazonaws.com/i/0be3edf5-c0f6-4669-9648-0a827c0f2daf/model-fc.gz",
+    "textureUrl": "http://hsm-prod-assets.s3.amazonaws.com/i/0be3edf5-c0f6-4669-9648-0a827c0f2daf/model-fc.png"
+  },
+  "ticket": {},
+  "tp": "surface",
+  "retailers": [
+    {
+      "name": "Williams Sonoma",
+      "url": "http://www.williams-sonoma.com/products/botanical-wreath-hard-mat/?pkey=ctable-linens-place-mats&cm_src=table-linens-place-mats||NoFacet-_-NoFacet-_--_-"
+    }
+  ],
+  "variations": {},
+  "attributes": [
+    {
+      "id": "f2ebc921-291a-42c6-be8d-e6f3019672fb",
+      "name": "AssetType",
+      "values": [
+        {
+          "id": "001e1123-52fb-42d4-a4fe-beffc201084a",
+          "value": "3D"
+        }
+      ]
+    },
+    {
+      "id": "9760302e-698a-4a18-8872-72f6ae9568bb",
+      "name": "zindex",
+      "values": [
+        {
+          "id": "0372a840-ff37-4bc3-9a71-7e2fc27a246b",
+          "value": "300"
+        }
+      ]
+    }
+  ],
+  "status": 1,
+  "modifiedTime": "2014-11-17T13:06:32.806Z",
+  "groups": []
+}

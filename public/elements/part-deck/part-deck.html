@@ -8,7 +8,7 @@
     </style>
 
     <div>
-      <template is="dom-repeat" items="{{items}}" filter="filter">
+      <template is="dom-repeat" items="{{items}}">
         <part-card item="{{item}}"></part-card>
       </template>
     </div>
@@ -25,19 +25,7 @@
       items: {
         type: Array,
         value: function () { return []; }
-      },
-      root: {
-        value: String,
-        value: '/'
       }
-    },
-
-    filter: function (item) {
-      var catalog = location.search.slice(1);
-      item.url = '/catalog/' + item.id + '?' + catalog;
-      item.texture_url = 'http://' + catalog + '/' + item.code + '/texture.png';
-      item.model_url = 'http://' + catalog + '/' + item.code + '/model.obj';
-      return true;
     }
 
   });

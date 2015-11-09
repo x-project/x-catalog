@@ -1,0 +1,86 @@
+{
+  "_id": "5583eae84ae08721a1b9e0bf",
+  "id": "0b349bf4-403f-4b6d-91d1-4de9c49d6803",
+  "name": "FRENCH CASEMENT LOW CABINET TAUPE Brown Oak Drifted",
+  "productType": "3D",
+  "zIndex": "200",
+  "vendor": "Restoration Hardware",
+  "vendorUrl": "http://hsm-prod-assets.S3.amazonaws.com/vendorlogos/41/logo.jpg",
+  "categories": [
+    "166",
+    "19"
+  ],
+  "images": [
+    "http://cf-hsm-prod-assets.homestyler.com/i/0b349bf4-403f-4b6d-91d1-4de9c49d6803/iso.jpg"
+  ],
+  "imagesResize": [
+    "http://cf-hsm-prod-assets.homestyler.com/i/0b349bf4-403f-4b6d-91d1-4de9c49d6803/resized/iso0_w160_h160.jpg"
+  ],
+  "top": "http://hsm-prod-assets.s3.amazonaws.com/i/0b349bf4-403f-4b6d-91d1-4de9c49d6803/Top.png",
+  "boundingBox": {
+    "xLen": 224.41700744628906,
+    "yLen": 47.938899993896484,
+    "zLen": 87.75309753417969
+  },
+  "model": {
+    "modelUrl": "http://hsm-prod-assets.s3.amazonaws.com/i/0b349bf4-403f-4b6d-91d1-4de9c49d6803/model-fc.gz",
+    "textureUrl": "http://hsm-prod-assets.s3.amazonaws.com/i/0b349bf4-403f-4b6d-91d1-4de9c49d6803/model-fc.png"
+  },
+  "ticket": {
+    "sku": ""
+  },
+  "tp": "seating",
+  "retailers": [
+    {
+      "name": "Restoration Hardware",
+      "price": 0,
+      "url": "http://www.restorationhardware.com/catalog/product/product.jsp?productId=prod2510508&categoryId=cat1970012"
+    }
+  ],
+  "variations": {},
+  "attributes": [
+    {
+      "id": "9760302e-698a-4a18-8872-72f6ae9568bb",
+      "name": "zindex",
+      "values": [
+        {
+          "id": "b8edcdbd-f62c-427b-9baf-3262b356a9df",
+          "value": "200"
+        }
+      ]
+    },
+    {
+      "id": "d852d083-4918-4f1b-b12f-72ac42d7325d",
+      "name": "WallOpeningType",
+      "values": [
+        {
+          "id": "78c6d804-5711-4fde-8c2d-ccb794e95e3c",
+          "value": "None"
+        }
+      ]
+    },
+    {
+      "id": "f2ebc921-291a-42c6-be8d-e6f3019672fb",
+      "name": "AssetType",
+      "values": [
+        {
+          "id": "001e1123-52fb-42d4-a4fe-beffc201084a",
+          "value": "3D"
+        }
+      ]
+    },
+    {
+      "id": "d84e3ec7-d39a-471e-8f39-58f645e209ef",
+      "name": "isScalable",
+      "values": [
+        {
+          "id": "f7a2e788-611f-459a-908d-dadd483699d9",
+          "value": "false"
+        }
+      ]
+    }
+  ],
+  "status": 1,
+  "modifiedTime": "2014-11-26T09:05:42.468Z",
+  "groups": []
+}

@@ -10,12 +10,10 @@
 
     <div class="page">
       <h1 class="title">Catalog</h1>
-      <h2 class="subtitle"><span>Object</span> <span>{{data.object.code}}</span></h2>
-      <a is="app-link" href="{{back}}">back</a>
-
-      <part-viewer model-url="{{data.object.model_url}}"
-        texture-url="{{data.object.texture_url}}">
-      </part-viewer>
+      <h2 class="subtitle">Object {{data.object.code}}</h2>
+      <a is="app-link" href="/catalog">back</a>
+      <part-viewer model-url="/storage/{{data.object.code}}/model.obj"
+        texture-url="/storage/{{data.object.code}}/texture.png"></part-viewer>
     </div>
 
   </template>
@@ -23,11 +21,7 @@
 <script>
   Polymer({
 
-    is: 'page-object',
-
-    attached: function () {
-      this.back = '/catalog?' + this.querystring;
-    }
+    is: 'page-object'
 
   });
 </script>

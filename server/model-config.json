@@ -35,5 +35,15 @@
 
   "Object": {
     "dataSource": "mongo"
+  },
+  "Appointment": {
+    "dataSource": "mongo"
+  },
+  "Patient": {
+    "dataSource": "mongo"
+  },
+  "Physician": {
+    "dataSource": "mongo"
   }
+
 }

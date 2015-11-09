@@ -26,7 +26,7 @@
     ],
 
     '/': function (context) {
-      this.redirect('/catalog?' + context.querystring);
+      this.redirect('/catalog');
     },
 
     '/catalog': function (context) {
@@ -43,11 +43,7 @@
         model_id: context.params.object_id
       })
       .then(function (object) {
-        var catalog = context.querystring;
-        object.model_url = 'http://' + catalog + '/' + object.code + '/model.obj';
-        object.texture_url = 'http://' + catalog + '/' + object.code + '/texture.png';
         context.data.object = object;
-        console.log(object);
         this.open(context);
       }.bind(this))
       .catch(function (error) {
@@ -56,7 +52,7 @@
     },
 
     '/*': function (context) {
-      this.redirect('/catalog?' + context.querystring);
+      this.redirect('/catalog');
     },
 
     fetch: function (params) {
