@@ -7,10 +7,14 @@
         width: 200px;
         height: 200px;
       }
+
+      .card {
+        text-decoration: none;
+      }
     </style>
 
-    <a is="app-link" href="/catalog/{{item.id}}">
-      <iron-image class="preview" src="/storage/{{item.code}}/texture.png" sizing="contain"></iron-image>
+    <a is="app-link" class="card" href="/catalog/{{item.id}}">
+      <iron-image class="preview" src="/storage/{{item.code}}/image.jpg" sizing="contain"></iron-image>
     </a>
 
   </template>

@@ -1,0 +1,14 @@
+[
+  {
+    "collection": "objects",
+    "datasource": "mongodb"
+  },
+  {
+    "collection": "_users",
+    "datasource": "mongodb"
+  },
+  {
+    "collection": "_tokens",
+    "datasource": "mongodb"
+  }
+]

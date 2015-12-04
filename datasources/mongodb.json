@@ -1,0 +1,7 @@
+{
+  "name": "mongodb",
+  "adapter": "mongo",
+  "options": {
+    "connectionUri": "mongodb://localhost:27017/x-catalog"
+  }
+}

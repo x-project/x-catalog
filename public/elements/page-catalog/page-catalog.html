@@ -11,19 +11,15 @@
 
     <api-model-find id="find" collection="objects"
       perpage="{{perpage}}" page="{{page}}"
-      response="{{objects}}">
+      response="{{response}}">
     </api-model-find>
-
-    <api-model-count id="count" collection="objects"
-      response="{{count}}">
-    </api-model-count>
 
     <div class="page">
       <h1 class="title">Catalog</h1>
 
-      <part-deck items="{{objects}}"></part-deck>
+      <part-deck items="{{response.data}}"></part-deck>
 
-      <part-pages perpage="{{perpage}}" count="{{count}}"
+      <part-pages perpage="{{perpage}}" count="{{response.count}}"
         on-change-page="on_change_page"></part-pages>
     </div>
 
@@ -36,7 +32,6 @@
 
     attached: function () {
       this.perpage = 20;
-      this.$.count.send();
       // this.$.find.send();
     },
 

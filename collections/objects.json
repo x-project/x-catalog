@@ -1,0 +1,15 @@
+{
+  "name": "objects",
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "defender": [
+    {
+      "action": "*",
+      "check": "skip"
+    }
+  ]
+}

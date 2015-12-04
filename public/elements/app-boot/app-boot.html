@@ -26,7 +26,9 @@
     ],
 
     '/': function (context) {
-      this.redirect('/catalog');
+      context.page = 'page-catalog';
+      this.open(context);
+      // this.redirect('/catalog');
     },
 
     '/catalog': function (context) {
@@ -42,8 +44,8 @@
         collection: 'objects',
         model_id: context.params.object_id
       })
-      .then(function (object) {
-        context.data.object = object;
+      .then(function (response) {
+        context.data.object = response.data;
         this.open(context);
       }.bind(this))
       .catch(function (error) {
