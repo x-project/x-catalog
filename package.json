@@ -7,10 +7,8 @@
     "pretest": "jshint ."
   },
   "dependencies": {
-    "forester": "^0.3.0"
-  },
-  "devDependencies": {
-    "babel": "^6.3.0"
+    "forester": "^0.3.4",
+    "forester-explorer": "^0.1.0"
   },
   "repository": {
     "type": "",

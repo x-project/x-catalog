@@ -5,6 +5,8 @@ var codes = fs.readdirSync(path.join(__dirname, '../storage'));
 
 module.exports = function (app) {
 
+  return;
+
   var collection = app.collections['objects'];
 
   var data = codes.filter(function (code) {
